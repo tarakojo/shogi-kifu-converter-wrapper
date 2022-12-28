@@ -46,11 +46,6 @@ fn parse(
     if (result.len() as i32) > dst_size {
         return result.len() as i32; //dst is too small
     }
-    for i in 0..dst_size {
-        unsafe {
-            *dst.offset(i as isize) = 0;
-        }
-    }
     for i in 0..result.len() {
         unsafe {
             *dst.offset(i as isize) = result[i] as i8;
@@ -134,11 +129,6 @@ fn convert(
 
     if (result.len() as i32) > dst_size {
         return result.len() as i32; //dst is too small
-    }
-    for i in 0..dst_size {
-        unsafe {
-            *dst.offset(i as isize) = 0;
-        }
     }
     for i in 0..result.len() {
         unsafe {
