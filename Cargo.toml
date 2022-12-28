@@ -1,0 +1,12 @@
+[package]
+name = "shogi-kifu-converter-wrapper"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "shogi_kifu_converter_wrapper"
+crate-type = ["cdylib"]
+
+[dependencies]
+shogi-kifu-converter = "0.2.1"
+serde_json = "1.0" 
